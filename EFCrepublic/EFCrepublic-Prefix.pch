@@ -1,0 +1,64 @@
+//
+// Prefix header for all source files of the 'PhotoData' target in the 'PhotoData' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+#import "EFCViewController.h"
+#import "Presenter.h"
+#import "Interactor.h"
+#import "Contenedor.h"
+#import "UrlCallsHelper.h"
+#import "RootWireframe.h"
+#import "FNDViewController.h"
+#import "Cancion.h"
+
+// Constante url petición para obtener el JSON a partir del cual se generá la entidad que informa la tabla
+#define URL_PETICION @"https://api.stackexchange.com/2.2/questions?page=1&pagesize=40&order=desc&sort=activity&site=stackoverflow"
+
+// Entidad que solicita la notificación
+#define ENTIDAD_SOLICITA_CONTENEDOR @"CONTENEDOR"
+
+// NOTIFICACION GENERADA ENTIDAD CONTENEDOR
+#define NOTIFICACION_GENERADO_CONTENEDOR @"NOTIFICACION_GENERADO_CONTENEDOR"
+
+// Nombre del dictionario raiz principal para obtener los datos
+#define DICTIONARY_ITEMS_DATOS @"results"
+
+// EJEMPLO DE BUSQUEDA
+#define BUSQUEDA_MICHAEL_JACKSON @"https://itunes.apple.com/search?term=michael+jackson"
+
+// Imagén por defecto en las imágenes de la celda
+#define IMAGEN_POR_DEFECTO_CELDA @"imgperfil.png"
+
+// Atributos a obtener del diccionario
+#define KEY_KIND @"kind"
+#define KEY_ARTISTID @"artistId"
+#define KEY_COLLECTIONID @"collectionId"
+#define KEY_TRACKID @"trackId"
+#define KEY_ARTISTNAME @"artistName"
+#define KEY_COLLECTIONCENSOREDNAME  @"collectionCensoredName"
+#define KEY_TRACKCENSOREDNAME  @"trackCensoredName"
+#define KEY_COLLECTIONARTISTNAME  @"collectionArtistName"
+#define KEY_ARTWORKURL30  @"artworkUrl30"
+#define KEY_ARTWORKURL60  @"artworkUrl60"
+#define KEY_ARTWORKURL100  @"artworkUrl100"
+#define KEY_COLLECTIONPRICE  @"collectionPrice"
+#define KEY_TRACKPRICE @"trackPrice"
+#define KEY_RELEASEDATE  @"releaseDate"
+#define KEY_TRACKTIMEMILLIS  @"trackTimeMillis"
+#define KEY_CURRENCY  @"currency"
+#define KEY_PRIMARYGENRENAME  @"primaryGenreName"
+
+
+
+
+
+#endif

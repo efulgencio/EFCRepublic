@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4154BA2E1C1AB10B008D45EF /* CancionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4154BA2B1C1AB10B008D45EF /* CancionCell.xib */; };
+		4154BA2F1C1AB10B008D45EF /* CancionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4154BA2D1C1AB10B008D45EF /* CancionCell.m */; };
 		41633B801C12C86A008F0749 /* UrlCallsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 41633B7F1C12C86A008F0749 /* UrlCallsHelper.m */; };
 		41633B831C12C8BA008F0749 /* GeneraEntidad.m in Sources */ = {isa = PBXBuildFile; fileRef = 41633B821C12C8BA008F0749 /* GeneraEntidad.m */; };
 		41633B861C12C9E2008F0749 /* Contenedor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41633B851C12C9E2008F0749 /* Contenedor.m */; };
@@ -47,7 +49,6 @@
 		41BE4E381C15C0FA00B51A08 /* FNDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BE4E361C15C0FA00B51A08 /* FNDViewController.xib */; };
 		41BE4E3B1C15C12E00B51A08 /* FNDPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE4E3A1C15C12E00B51A08 /* FNDPresenter.m */; };
 		41BE4E3E1C15C15400B51A08 /* FNDInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE4E3D1C15C15400B51A08 /* FNDInteractor.m */; };
-		41BE4E411C15C17E00B51A08 /* FNDView.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE4E401C15C17E00B51A08 /* FNDView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4154BA2B1C1AB10B008D45EF /* CancionCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CancionCell.xib; sourceTree = "<group>"; };
+		4154BA2C1C1AB10B008D45EF /* CancionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CancionCell.h; sourceTree = "<group>"; };
+		4154BA2D1C1AB10B008D45EF /* CancionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CancionCell.m; sourceTree = "<group>"; };
 		41633B7E1C12C86A008F0749 /* UrlCallsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UrlCallsHelper.h; sourceTree = "<group>"; };
 		41633B7F1C12C86A008F0749 /* UrlCallsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UrlCallsHelper.m; sourceTree = "<group>"; };
 		41633B811C12C8BA008F0749 /* GeneraEntidad.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GeneraEntidad.h; sourceTree = "<group>"; };
@@ -152,7 +156,6 @@
 		41BE4E3C1C15C15400B51A08 /* FNDInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNDInteractor.h; sourceTree = "<group>"; };
 		41BE4E3D1C15C15400B51A08 /* FNDInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNDInteractor.m; sourceTree = "<group>"; };
 		41BE4E3F1C15C17E00B51A08 /* FNDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNDView.h; sourceTree = "<group>"; };
-		41BE4E401C15C17E00B51A08 /* FNDView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNDView.m; sourceTree = "<group>"; };
 		41BE4E421C15C33300B51A08 /* FNDViewInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDViewInterface.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +184,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4154BA2A1C1AB0EB008D45EF /* celda */ = {
+			isa = PBXGroup;
+			children = (
+				4154BA2B1C1AB10B008D45EF /* CancionCell.xib */,
+				4154BA2C1C1AB10B008D45EF /* CancionCell.h */,
+				4154BA2D1C1AB10B008D45EF /* CancionCell.m */,
+			);
+			name = celda;
+			sourceTree = "<group>";
+		};
+		4154BA331C1AB229008D45EF /* entidades */ = {
+			isa = PBXGroup;
+			children = (
+				41633B841C12C9E2008F0749 /* Contenedor.h */,
+				41633B851C12C9E2008F0749 /* Contenedor.m */,
+				417786741C1780EE00371B7B /* Cancion.h */,
+				417786751C1780EE00371B7B /* Cancion.m */,
+			);
+			name = entidades;
+			sourceTree = "<group>";
+		};
 		41633B7D1C12C84B008F0749 /* helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,10 +212,6 @@
 				41633B7F1C12C86A008F0749 /* UrlCallsHelper.m */,
 				41633B811C12C8BA008F0749 /* GeneraEntidad.h */,
 				41633B821C12C8BA008F0749 /* GeneraEntidad.m */,
-				41633B841C12C9E2008F0749 /* Contenedor.h */,
-				41633B851C12C9E2008F0749 /* Contenedor.m */,
-				417786741C1780EE00371B7B /* Cancion.h */,
-				417786751C1780EE00371B7B /* Cancion.m */,
 			);
 			name = helpers;
 			sourceTree = "<group>";
@@ -231,11 +251,11 @@
 		41633B8D1C12CDCA008F0749 /* encontrados */ = {
 			isa = PBXGroup;
 			children = (
-				418E55481C159BDF000875FB /* routing */,
-				41633B911C12CE96008F0749 /* viewcontroller */,
-				41633B901C12CE8C008F0749 /* view */,
-				41633B8F1C12CE85008F0749 /* presenter */,
 				41633B8E1C12CE7C008F0749 /* interactor */,
+				41633B8F1C12CE85008F0749 /* presenter */,
+				41633B901C12CE8C008F0749 /* view */,
+				41633B911C12CE96008F0749 /* viewcontroller */,
+				418E55481C159BDF000875FB /* routing */,
 			);
 			name = encontrados;
 			sourceTree = "<group>";
@@ -263,7 +283,6 @@
 			isa = PBXGroup;
 			children = (
 				41BE4E3F1C15C17E00B51A08 /* FNDView.h */,
-				41BE4E401C15C17E00B51A08 /* FNDView.m */,
 			);
 			name = view;
 			sourceTree = "<group>";
@@ -307,7 +326,9 @@
 				4165F5471C11E017005CC9A0 /* AppDelegate.h */,
 				4165F5481C11E017005CC9A0 /* AppDelegate.m */,
 				41633B871C12CA3D008F0749 /* casosuso */,
+				4154BA2A1C1AB0EB008D45EF /* celda */,
 				41633B7D1C12C84B008F0749 /* helpers */,
+				4154BA331C1AB229008D45EF /* entidades */,
 				4165F5921C11E3DD005CC9A0 /* pch */,
 				4165F5441C11E017005CC9A0 /* Supporting Files */,
 				417786721C1776A600371B7B /* informacion.rtf */,
@@ -557,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417FB3291C18DE47003748E4 /* imgperfil.png in Resources */,
+				4154BA2E1C1AB10B008D45EF /* CancionCell.xib in Resources */,
 				4165F5911C11E35A005CC9A0 /* EFCViewController.xib in Resources */,
 				4165F5541C11E017005CC9A0 /* LaunchScreen.storyboard in Resources */,
 				41BE4E381C15C0FA00B51A08 /* FNDViewController.xib in Resources */,
@@ -588,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				417FB3561C18DF07003748E4 /* AFURLSessionManager.m in Sources */,
+				4154BA2F1C1AB10B008D45EF /* CancionCell.m in Sources */,
 				417FB35B1C18DF07003748E4 /* UIImageView+AFNetworking.m in Sources */,
 				417FB3531C18DF07003748E4 /* AFURLConnectionOperation.m in Sources */,
 				41633B861C12C9E2008F0749 /* Contenedor.m in Sources */,
@@ -602,7 +625,6 @@
 				417FB35C1C18DF07003748E4 /* UIProgressView+AFNetworking.m in Sources */,
 				4165F5491C11E017005CC9A0 /* AppDelegate.m in Sources */,
 				417FB35A1C18DF07003748E4 /* UIButton+AFNetworking.m in Sources */,
-				41BE4E411C15C17E00B51A08 /* FNDView.m in Sources */,
 				4165F5901C11E35A005CC9A0 /* EFCViewController.m in Sources */,
 				417FB34F1C18DF07003748E4 /* AFHTTPRequestOperationManager.m in Sources */,
 				416FBA1D1C15645300EBA65B /* RootWireframe.m in Sources */,

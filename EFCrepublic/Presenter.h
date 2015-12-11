@@ -14,7 +14,7 @@
 
 @interface Presenter : NSObject <InteractorOutput>
 
-@property(nonatomic, weak) id<View>                 view;
+@property(nonatomic, weak) id<View> view;
 
 @property(nonatomic, strong) id<InteractorInput>    interactor;
 @property (nonatomic, strong) ListWireframe *listWireframe;

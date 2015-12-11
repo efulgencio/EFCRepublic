@@ -7,6 +7,7 @@
 //
 
 #import "FNDViewController.h"
+#import "Presenter.h"
 
 @interface FNDViewController ()
 
@@ -16,12 +17,21 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+}
+
+-(void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:YES];
+    // Cuando selecciono una fila
+    // y cargo la configuración, no sé
+    // si están acccesibles todas las clases ??
+    // Al presenter le tengo que pasar la posición del array para que me retorne
+    // el elemento que quiero seleccionar
+    [self.presenter obtenerDatos:self.posicionSel]; // cambiar 1 por el valor seleccionado
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (void)setEntryName:(NSString *)name
@@ -42,6 +52,12 @@
  //   self.datePicker.minimumDate = date;
 }
 
+-(void) cargaCancion:(Cancion *) cancionIn
+{
+    self.cancion = cancionIn;
+    self.LBLcancion.text = cancionIn.trackCensoredName;
+    // Ahora tendré que actualizar el contenido
+}
 
 /*
 #pragma mark - Navigation

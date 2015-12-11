@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FNDView : NSObject
+@protocol FNDView <NSObject>
+
+- (void)cargaCancion:(Cancion *) cancionIn;
 
 @end

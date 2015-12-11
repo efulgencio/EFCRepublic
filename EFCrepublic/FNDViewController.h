@@ -8,9 +8,17 @@
 
 #import <UIKit/UIKit.h>
 #import "FNDViewInterface.h"
+#import "FNDView.h"
 
-@interface FNDViewController : UIViewController <FNDViewInterface>
+@class FNDPresenter;
+
+@interface FNDViewController : UIViewController <FNDViewInterface, FNDView>
 
 // @property (nonatomic, strong) id<FNDModuleInterface> eventHandler;
+@property (nonatomic, strong) FNDPresenter *presenter;
+@property(nonatomic, strong) Cancion *cancion;
+@property(nonatomic) NSInteger posicionSel;
+@property (weak, nonatomic) IBOutlet UILabel *LBLcancion;
+
 
 @end

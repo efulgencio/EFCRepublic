@@ -17,5 +17,15 @@
     [fndUserInterface setMinimumDueDate:[NSDate date]];
 }
 
+-(void) obtenerDatos:(NSInteger)posicion
+{
+    [self.interactor obtenerDatos:posicion];
+}
+
+-(void) updateCancion:(Cancion *)cancion
+{
+    [self.view cargaCancion:cancion];
+}
+
 
 @end

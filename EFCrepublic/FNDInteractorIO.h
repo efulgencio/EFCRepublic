@@ -7,14 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Cancion.h"
 
-@protocol FNDInteractorInput <NSObject>
-- (void)obtenerDatos;
+@protocol FNDInteractorInput <NSObject> 
+- (void) obtenerDatos:(NSInteger)posicion;
 @end
 
 
 @protocol FNDInteractorOutput <NSObject>
-- (void) updateDatos:(NSArray *)datos;
-- (void) updateDatosDict:(NSDictionary *)datosDict;
-
+- (void) updateCancion:(Cancion *)cancion;
 @end

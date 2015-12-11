@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "FNDInteractorIO.h"
 
-@interface FNDInteractor : NSObject
-
+@interface FNDInteractor : NSObject <FNDInteractorInput>
+@property (nonatomic, weak) id<FNDInteractorOutput> output;
+@property (nonatomic, strong) NSArray *canciones;
 @end

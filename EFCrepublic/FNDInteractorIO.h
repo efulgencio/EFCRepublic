@@ -11,6 +11,8 @@
 
 @protocol FNDInteractorInput <NSObject> 
 - (void) obtenerDatos:(NSInteger)posicion;
+- (void) siguiente;
+- (void) anterior;
 @end
 
 

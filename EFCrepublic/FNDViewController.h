@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FNDViewInterface.h"
 #import "FNDView.h"
+#import <Social/Social.h>
 
 @class FNDPresenter;
 
@@ -20,5 +21,6 @@
 @property(nonatomic) NSInteger posicionSel;
 @property (weak, nonatomic) IBOutlet UILabel *LBLcancion;
 
+@property (weak, nonatomic) IBOutlet UIButton *btnCompartir;
 
 @end

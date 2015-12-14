@@ -27,5 +27,15 @@
     [self.view cargaCancion:cancion];
 }
 
+-(void) siguiente
+{
+    [self.interactor siguiente];
+}
+
+-(void) anterior
+{
+    [self.interactor anterior];
+}
+
 
 @end

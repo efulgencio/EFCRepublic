@@ -18,5 +18,8 @@
 
 - (void)configureUserInterfaceForPresentation:(id<FNDViewInterface>) fndUserInterface;
 - (void)obtenerDatos:(NSInteger)posicion;
+- (void)siguiente;
+- (void)anterior;
+
 
 @end

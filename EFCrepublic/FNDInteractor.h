@@ -12,4 +12,5 @@
 @interface FNDInteractor : NSObject <FNDInteractorInput>
 @property (nonatomic, weak) id<FNDInteractorOutput> output;
 @property (nonatomic, strong) NSArray *canciones;
+@property (nonatomic) NSInteger posicionActual;
 @end

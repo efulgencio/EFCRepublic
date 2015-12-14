@@ -59,14 +59,117 @@
     // Ahora tendré que actualizar el contenido
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction)actionAnterior:(id)sender {
+    [self.presenter anterior];
 }
-*/
+
+- (IBAction)actionSiguiente:(id)sender {
+    [self.presenter siguiente];
+}
+
+
+
+// ESTAS LINEAS SON PARA COMPARTIR CONTENIDO, QUEDA PENDIENTE DE REFACTORIZAR
+
+- (IBAction)btnCompartirAction:(id)sender {
+    
+    NSString *twitterButtonTitle = NSLocalizedString(@"Twitter", nil);
+    NSString *facebookButtonTitle = NSLocalizedString(@"Facebook", nil);
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    
+    // Create the actions.
+    UIAlertAction *twitterAction = [UIAlertAction actionWithTitle:twitterButtonTitle style:UIAlertActionStyleDestructive handler:^(UIAlertAction *action) {
+        [self compartirTwitter];
+    }];
+    
+    UIAlertAction *facebookAction = [UIAlertAction actionWithTitle:facebookButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self compartirFacebook];
+    }];
+    
+    
+    [alertController addAction:twitterAction];
+    [alertController addAction:facebookAction];
+
+    UIPopoverPresentationController *popoverPresentationController = [alertController popoverPresentationController];
+    
+    if (popoverPresentationController) {
+        popoverPresentationController.sourceRect = self.btnCompartir.frame;
+        popoverPresentationController.sourceView = self.view;
+        popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp;
+    }
+    
+    [self presentViewController:alertController animated:YES completion:nil];
+
+}
+
+
+-(void)compartirTwitter
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        
+        SLComposeViewController *composerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        
+        [composerSheet setInitialText:self.LBLcancion.text];
+        [composerSheet addURL:[NSURL URLWithString:@"http://www.bcn.cat"]];
+        [composerSheet addImage:[UIImage imageNamed:@"imagenciudad.png"]];
+        [composerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+       
+            
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                  NSLog(@"Pendiente de implementar");
+                    break;
+                case SLComposeViewControllerResultDone:
+                   NSLog(@"Pendiente de implementar");
+                    break;
+                    
+                default:
+                    break;
+            }
+        }];
+        
+        [self presentViewController:composerSheet animated:YES completion:nil];
+    }else {
+        
+    }
+   
+}
+
+
+-(void)compartirFacebook
+{
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        
+        
+        SLComposeViewController *composerSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        
+        [composerSheet setInitialText:self.LBLcancion.text];
+        [composerSheet addURL:[NSURL URLWithString:@"http://www.bcn.cat"]];
+        [composerSheet addImage:[UIImage imageNamed:@"imagenciudad.png"]];
+        [composerSheet setCompletionHandler:^(SLComposeViewControllerResult result) {
+            
+            switch (result) {
+                case SLComposeViewControllerResultCancelled:
+                    NSLog(@"Pendiente de implementar");
+                    break;
+                case SLComposeViewControllerResultDone:
+                    NSLog(@"Pendiente de implementar");
+                    break;
+                    
+                default:
+                    break;
+            }
+        }];
+        
+        [self presentViewController:composerSheet animated:YES completion:nil];
+    }else {
+        
+    }
+ 
+}
+
+
 
 @end

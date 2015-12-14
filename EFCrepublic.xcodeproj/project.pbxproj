@@ -49,6 +49,9 @@
 		41BE4E381C15C0FA00B51A08 /* FNDViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41BE4E361C15C0FA00B51A08 /* FNDViewController.xib */; };
 		41BE4E3B1C15C12E00B51A08 /* FNDPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE4E3A1C15C12E00B51A08 /* FNDPresenter.m */; };
 		41BE4E3E1C15C15400B51A08 /* FNDInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 41BE4E3D1C15C15400B51A08 /* FNDInteractor.m */; };
+		41ED2E951C1EF77F00AC6DC8 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41ED2E941C1EF77F00AC6DC8 /* Twitter.framework */; };
+		41ED2E971C1EF78600AC6DC8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41ED2E961C1EF78600AC6DC8 /* Social.framework */; };
+		41ED2E991C1EFB3D00AC6DC8 /* imagenciudad.png in Resources */ = {isa = PBXBuildFile; fileRef = 41ED2E981C1EFB3D00AC6DC8 /* imagenciudad.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -157,6 +160,9 @@
 		41BE4E3D1C15C15400B51A08 /* FNDInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FNDInteractor.m; sourceTree = "<group>"; };
 		41BE4E3F1C15C17E00B51A08 /* FNDView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FNDView.h; sourceTree = "<group>"; };
 		41BE4E421C15C33300B51A08 /* FNDViewInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FNDViewInterface.h; sourceTree = "<group>"; };
+		41ED2E941C1EF77F00AC6DC8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		41ED2E961C1EF78600AC6DC8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		41ED2E981C1EFB3D00AC6DC8 /* imagenciudad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imagenciudad.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,6 +170,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41ED2E971C1EF78600AC6DC8 /* Social.framework in Frameworks */,
+				41ED2E951C1EF77F00AC6DC8 /* Twitter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +309,9 @@
 		4165F5381C11E017005CC9A0 = {
 			isa = PBXGroup;
 			children = (
+				41ED2E981C1EFB3D00AC6DC8 /* imagenciudad.png */,
+				41ED2E961C1EF78600AC6DC8 /* Social.framework */,
+				41ED2E941C1EF77F00AC6DC8 /* Twitter.framework */,
 				417FB32A1C18DF07003748E4 /* AFNetworking */,
 				417FB33E1C18DF07003748E4 /* UIKit+AFNetworking */,
 				4165F5431C11E017005CC9A0 /* EFCrepublic */,
@@ -580,6 +591,7 @@
 				417FB3291C18DE47003748E4 /* imgperfil.png in Resources */,
 				4154BA2E1C1AB10B008D45EF /* CancionCell.xib in Resources */,
 				4165F5911C11E35A005CC9A0 /* EFCViewController.xib in Resources */,
+				41ED2E991C1EFB3D00AC6DC8 /* imagenciudad.png in Resources */,
 				4165F5541C11E017005CC9A0 /* LaunchScreen.storyboard in Resources */,
 				41BE4E381C15C0FA00B51A08 /* FNDViewController.xib in Resources */,
 				4165F5511C11E017005CC9A0 /* Assets.xcassets in Resources */,

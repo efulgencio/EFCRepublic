@@ -8,6 +8,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FNDViewController">
             <connections>
                 <outlet property="LBLcancion" destination="qVp-XK-2cO" id="o3c-9p-Ue9"/>
+                <outlet property="btnCompartir" destination="yZ2-Bb-af4" id="XEU-7L-NhQ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,12 +18,37 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Canción seleccionada ....." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVp-XK-2cO">
-                    <rect key="frame" x="50" y="72" width="297" height="21"/>
+                    <rect key="frame" x="48" y="130" width="297" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="19"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yZ2-Bb-af4">
+                    <rect key="frame" x="48" y="62" width="169" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" title="compartir"/>
+                    <connections>
+                        <action selector="btnCompartirAction:" destination="-1" eventType="touchUpInside" id="0vP-kO-zZ9"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYP-zw-O9V">
+                    <rect key="frame" x="48" y="229" width="100" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Anterior"/>
+                    <connections>
+                        <action selector="actionAnterior:" destination="-1" eventType="touchUpInside" id="oR9-KC-ks2"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qNU-z2-fDY">
+                    <rect key="frame" x="222" y="229" width="103" height="30"/>
+                    <animations/>
+                    <state key="normal" title="Siguiente"/>
+                    <connections>
+                        <action selector="actionSiguiente:" destination="-1" eventType="touchUpInside" id="i9S-UQ-pTP"/>
+                    </connections>
+                </button>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

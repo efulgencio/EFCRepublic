@@ -31,3 +31,11 @@ donde usarías clases abstractas.
 4. Define un par de patrones de diseñon que hayas utilizado y en qué casos son útiles.
 
 5. ¿Qué factores son importantes tener en cuenta durante el proceso de carga de datos en una App?
+
+5. ¿Qué factores son importantes tener en cuenta durante el proceso de carga de datos en una App?
+
+6. ¿Qué métodos de persistencia de información (almacenamiento de datos) están disponibles y cuáles usarías?
+
+7. Explica 3 buenas prácticas para conseguir una interfaz fluida en una App.
+
+8. En desarrollo, ¿puedes contarnos algunos "horrores de programación" que hayas encontrado?

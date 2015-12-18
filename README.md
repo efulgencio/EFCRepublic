@@ -19,6 +19,7 @@ Por un lado creando índices entre los campos que intervienen en la sentencia y 
 3. ¿Qué diferencias hay entre una API Rest y una API Soap?
 
 REST: utiliza casi siempres HTTP como metodo de comunicación y XML o JSON para intercambiar datos. Cada URL representa un objeto sobre el que se pueden utilizar los métodos, POST, GET, PUT y DELETE. 
+
 SOAP: es una infraestructura basada en XML, cada objeto puede tener métodos definidos por el programador con los parámetros necesarios. 
 
 4. Define un par de patrones de diseño que hayas utilizado y en qué casos son útiles.

@@ -23,8 +23,9 @@ Por un lado creando índices entre los campos que intervienen en la sentencia y 
 
  Singleton,  creación de una única instancia de una clase que es accesible por toda la app, este patrón lo utilizo
  como contenedor de información y estado que varias pantallas de la App 
- Observer, 
-  una entrada en mi blog tengo un ejemplo de kvc - kvo
+ 
+ Observer, un objeto esta pendiente de un evento para realizar una operación. 
+ La utilizo para detectar cambios en la propiedad de una instancia, mirar la entrada en mi blog tengo un ejemplo de kvc - kvo
   http://onedayoneknowing.blogspot.com.es/2015/06/relacion-entre-kvc-y-kvo-key-value.html
  
 

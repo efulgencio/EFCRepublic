@@ -39,7 +39,8 @@ Por un lado creando índices entre los campos que intervienen en la sentencia y 
   
 6. ¿Qué métodos de persistencia de información (almacenamiento de datos) están disponibles y cuáles usarías?
 
-   - Core Data
+   - Core Data, permite la creación de tablas orientada a objtetos, (uno a uno, uno a muchos, muchos a muchos). La utilizo en las Apps que conviven datos relacionales, por ejemplo en una App de futbol tengo NSManagedObjectModel (Equipo) y lo relaciono con NSManagedObjectModel (Jugadores) en una relación one-to-more
+   - 
    - Almacenar en el aréa de la App
    - Serializar objetos
 

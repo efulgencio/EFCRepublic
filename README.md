@@ -42,8 +42,9 @@ Por un lado creando índices entre los campos que intervienen en la sentencia y 
    - Core Data, permite la creación de tablas orientada a objtetos, (uno a uno, uno a muchos, muchos a muchos). La utilizo en las Apps que conviven datos relacionales, por ejemplo en una App de futbol tengo NSManagedObjectModel (Equipo) y lo relaciono con NSManagedObjectModel (Jugadores) en una relación one-to-more
     
    - Almacenar los objetos con el método writeToFile de un NSString, NSDictionary, NSArray, NSData, ... En el caso de querer almacenar
-   
-   - Objectos de tipo NSObject que declaramos y que debemos incluir el protocolo NSCoding, para realizar NSKeyedArchiver y NSKeyedUnArchiver.
+datos que se generar dentro de la App y que no son preferencias de la App, lo almacenaría en NSTemporaryDirectory. En el caso de una valor que mantiene el aspecto de la App en posteriores ejecuciones lo almaceno en NSUserDefault.   
+
+   - Objectos de tipo NSObject que declaramos y que debemos incluir el protocolo NSCoding, para realizar NSKeyedArchiver y NSKeyedUnArchiver. Si me interesa almacenar un objeto que no es una entidad de Core Data, por ejemplo un DTO utilizaría esta opción
 
 7. Explica 3 buenas prácticas para conseguir una interfaz fluida en una App.
 

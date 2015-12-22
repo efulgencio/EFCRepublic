@@ -40,8 +40,8 @@ SOAP: es una infraestructura basada en XML, cada objeto puede tener métodos def
    - En los proyecto que he desarrollado App "Montseny" los datos están almacenados en una base de datos Sqlite.
    - El resto de datos se obtienen de back office del que voy a obtener ficheros xml siempre que la versión de los datos se han actualizado. Los ficheros xml se almacenan en el dispositivo. 
   
-   - En el caso de que durante la carga la App para a estado no activo, en el applicationDidEnterBackground realizar el final del proceso de cargo.
-   - 
+
+   
 6. ¿Qué métodos de persistencia de información (almacenamiento de datos) están disponibles y cuáles usarías?
 
    - Core Data, permite la creación de tablas orientada a objtetos, (uno a uno, uno a muchos, muchos a muchos). La utilizo en las Apps que conviven datos relacionales, por ejemplo en una App de futbol tengo NSManagedObjectModel (Equipo) y lo relaciono con NSManagedObjectModel (Jugadores) en una relación one-to-more

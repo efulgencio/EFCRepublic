@@ -13,15 +13,7 @@
 
 static NSString *TableViewCellIdentifier = @"celdaCancion";
 
-/*
-- (id) init
-{
-    if ((self = [super init])) {
-        self.arryDatos = [[NSArray alloc] initWithObjects:@"uno",@"dos", nil];
-    }
-    return self;
-}
-*/
+
 
 - (id)itemAtIndexPath:(NSIndexPath *)indexPath
 {

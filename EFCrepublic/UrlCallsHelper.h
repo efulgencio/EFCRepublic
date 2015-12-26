@@ -11,7 +11,8 @@
 
 @interface UrlCallsHelper : NSObject
 
-+(NSObject *) peticion:(NSString *) urlIn entidad:(NSString *) entidad notificar:(id)notificar;
+//+(NSObject *) peticion:(NSString *) urlIn entidad:(NSString *) entidad notificar:(id)notificar;
++(void) peticion:(NSString *) urlIn entidad:(NSString *) entidad notificar:(id)notificar;
 
 
 

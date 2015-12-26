@@ -12,7 +12,7 @@
 
 @class Presenter;
 
-@interface EFCViewController : UIViewController <View, UITableViewDelegate, UITableViewDataSource,  ListViewInterface>
+@interface EFCViewController : UIViewController <View,  ListViewInterface, UITableViewDelegate>
 
 @property (nonatomic, strong) Presenter *presenter;
 

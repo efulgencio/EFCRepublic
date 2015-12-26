@@ -8,6 +8,7 @@
 
 #import "FNDViewController.h"
 #import "Presenter.h"
+#import "UIImageView+AFNetworking.h"
 
 @interface FNDViewController ()
 
@@ -27,7 +28,7 @@
     // si están acccesibles todas las clases ??
     // Al presenter le tengo que pasar la posición del array para que me retorne
     // el elemento que quiero seleccionar
-    [self.presenter obtenerDatos:self.posicionSel]; // cambiar 1 por el valor seleccionado
+    [self.presenter obtenerDatos:self.posicionSel];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -57,6 +58,26 @@
     self.cancion = cancionIn;
     self.LBLcancion.text = cancionIn.trackCensoredName;
     // Ahora tendré que actualizar el contenido
+    
+    NSURL *url = [NSURL URLWithString:cancionIn.artworkUrl100];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    UIImage *placeholderImage = [UIImage imageNamed:IMAGEN_POR_DEFECTO_CELDA];
+    
+    [self.imgImagen setImageWithURLRequest:request
+                            placeholderImage:placeholderImage
+                                     success:^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+                                         
+                                         self.imgImagen.image = image;
+                                         [self.imgImagen setNeedsLayout];
+                                         
+                                     }
+                                     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error){
+                                         if(error) {
+                                             NSLog(@"%@",error.description);
+                                         };
+                                     }
+     ];
+
 }
 
 

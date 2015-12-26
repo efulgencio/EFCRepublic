@@ -32,7 +32,6 @@
 {
     // BUSQUEDA configuración
     
-    
     EFCViewController* efcView = [[EFCViewController alloc] init];
     Presenter *presenter = [[Presenter alloc] init];
     Interactor *interactor = [[Interactor alloc] init];
@@ -49,29 +48,6 @@
     listWireframe.rootWireframe = rootWireframe;
     
     self.window.rootViewController = efcView;
-    
-    /*
-    FNDViewController *fndViewController = [[FNDViewController alloc] initWithNibName:@"FNDViewController" bundle:nil];
-    
-    // ENCONTRADOS configurarción
-    // FIND = FND
-    
-    FNDInteractor *fndInteractor = [[FNDInteractor alloc] init];
-    FNDPresenter *fndPresenter = [[FNDPresenter alloc] init];
-    
-    fndViewController.presenter = fndPresenter;
-    
-    fndPresenter.view = fndViewController;
-    fndPresenter.interactor = fndInteractor;
-    fndInteractor.output = fndPresenter;
-    // Le paso el array pero tendría que tener acceso a un datasource
-    Cancion *cancion = [[Cancion alloc] init];
-    cancion.artistName = @"nombre del artista";
-    fndInteractor.canciones = [[NSArray alloc] initWithObjects:cancion, nil];
-    self.window.rootViewController = fndViewController;
-    
-    */
-    
         
 }
 

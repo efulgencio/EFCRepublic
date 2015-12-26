@@ -20,31 +20,19 @@
 
 - (void)obtenerDatos
 {
-    
-    [[NSNotificationCenter defaultCenter]  addObserver:self  selector:@selector(datosRetorno:)
-                                                  name:(NSString *)NOTIFICACION_GENERADO_CONTENEDOR object:self];
-    
-    self.model = (Contenedor *)[UrlCallsHelper peticion:BUSQUEDA_MICHAEL_JACKSON  entidad:ENTIDAD_SOLICITA_CONTENEDOR notificar:self];
-    
+
+    [[NSNotificationCenter defaultCenter] addObserverForName:(NSString *)NOTIFICACION_GENERADO_CONTENEDOR
+                                                      object:self
+                                                       queue:[NSOperationQueue mainQueue]
+                                                  usingBlock:^(NSNotification *notification) {
+                                                      id datosRecibidos = [notification userInfo];
+                                                      [self.output updateDatosDict:datosRecibidos];
+                                                  }];
+
+
+    [UrlCallsHelper peticion:BUSQUEDA_MICHAEL_JACKSON  entidad:ENTIDAD_SOLICITA_CONTENEDOR notificar:self];
+
 }
 
- // Método observer de la notificación NOTIFICACION_GENERADO_CONTENEDOR
- // que indica que se ha generado la información necesaria para la tabla
-// envio un NSDictionary y el presenter se encargará de transformar en la entidad necesaria
- - (void) datosRetorno:(NSNotification *)paramNotification
-{
- id datosRecibidos = [paramNotification userInfo];
- [self.output updateDatosDict:datosRecibidos];
-}
-
-- (void)sendDatos:(NSArray *)arrayIn
-{
-    [self.output updateDatos:arrayIn];
-}
-
-- (void)sendDatosDict:(NSDictionary *)dictionaryIn
-{
-    [self.output updateDatosDict:dictionaryIn];
-}
 
 @end

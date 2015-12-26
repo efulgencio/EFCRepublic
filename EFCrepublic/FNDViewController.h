@@ -20,7 +20,8 @@
 @property(nonatomic, strong) Cancion *cancion;
 @property(nonatomic) NSInteger posicionSel;
 @property (weak, nonatomic) IBOutlet UILabel *LBLcancion;
-
 @property (weak, nonatomic) IBOutlet UIButton *btnCompartir;
+@property (weak, nonatomic) IBOutlet UIImageView *imgImagen;
+
 
 @end
